@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devias Kit Dashboard</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Simple donut chart */
+    .donut {
+      background:
+        conic-gradient(
+          #7c3aed 0% 63%,
+          #f59e0b 63% 78%,
+          #10b981 78% 100%
+        );
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<div class="flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gradient-to-b from-gray-900 to-indigo-900 text-white p-6">
+    <h1 class="text-2xl font-bold mb-8">Devias</h1>
+
+    <nav class="space-y-4 text-gray-300">
+      <a href="#" class="block px-4 py-2 rounded bg-indigo-600 text-white">Overview</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Customers</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Companies</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Account</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Settings</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Login</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Register</a>
+      <a href="#" class="block px-4 py-2 hover:bg-indigo-700 rounded">Error</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold">Devias Kit</h2>
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">
+          RV
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-500">Budget</p>
+        <h3 class="text-2xl font-bold">$24k</h3>
+        <p class="text-green-500 text-sm mt-2">↑ 12% since last month</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-500">Total Customers</p>
+        <h3 class="text-2xl font-bold">1.6k</h3>
+        <p class="text-red-500 text-sm mt-2">↓ 16% since last month</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-500">Task Progress</p>
+        <h3 class="text-2xl font-bold">75.5%</h3>
+        <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+          <div class="bg-indigo-600 h-2 rounded-full" style="width:75.5%"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-gray-500">Total Profit</p>
+        <h3 class="text-2xl font-bold">$15k</h3>
+      </div>
+
+    </div>
+
+    <!-- Charts -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- Sales Chart -->
+      <div class="bg-white p-6 rounded-xl shadow lg:col-span-2">
+        <div class="flex justify-between mb-4">
+          <h3 class="font-semibold">Sales</h3>
+          <button class="text-sm text-indigo-600">Sync</button>
+        </div>
+
+        <div class="flex items-end space-x-3 h-48">
+          <!-- Bars -->
+          <div class="w-4 bg-indigo-500 h-40 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-28 rounded"></div>
+          <div class="w-4 bg-indigo-500 h-20 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-24 rounded"></div>
+          <div class="w-4 bg-indigo-500 h-14 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-36 rounded"></div>
+          <div class="w-4 bg-indigo-500 h-32 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-40 rounded"></div>
+          <div class="w-4 bg-indigo-500 h-44 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-38 rounded"></div>
+          <div class="w-4 bg-indigo-500 h-48 rounded"></div>
+          <div class="w-4 bg-indigo-300 h-42 rounded"></div>
+        </div>
+      </div>
+
+      <!-- Traffic Source -->
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-semibold mb-6">Traffic Source</h3>
+
+        <div class="flex justify-center">
+          <div class="donut w-40 h-40 rounded-full relative">
+            <div class="absolute inset-6 bg-white rounded-full"></div>
+          </div>
+        </div>
+
+        <div class="flex justify-around mt-6 text-sm">
+          <div class="text-center">
+            <span class="block w-3 h-3 bg-indigo-600 rounded-full mx-auto mb-1"></span>
+            Desktop<br/>63%
+          </div>
+          <div class="text-center">
+            <span class="block w-3 h-3 bg-yellow-500 rounded-full mx-auto mb-1"></span>
+            Tablet<br/>15%
+          </div>
+          <div class="text-center">
+            <span class="block w-3 h-3 bg-green-500 rounded-full mx-auto mb-1"></span>
+            Phone<br/>22%
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

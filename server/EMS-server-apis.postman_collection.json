@@ -1,0 +1,251 @@
+{
+  "info": {
+    "name": "EMS Server APIs",
+    "_postman_id": "ems-server-apis-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secret\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Departments - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* department fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/departments",
+          "host": ["{{base_url}}"],
+          "path": ["api", "departments"]
+        }
+      }
+    },
+    {
+      "name": "Departments - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/departments",
+          "host": ["{{base_url}}"],
+          "path": ["api", "departments"]
+        }
+      }
+    },
+    {
+      "name": "Departments - Get By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/departments/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "departments", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Departments - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* updated department fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/departments/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "departments", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Departments - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/departments/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "departments", ":id"]
+        }
+      }
+    },
+
+    {
+      "name": "Employees - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* employee fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/employees",
+          "host": ["{{base_url}}"],
+          "path": ["api", "employees"]
+        }
+      }
+    },
+    {
+      "name": "Employees - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/employees",
+          "host": ["{{base_url}}"],
+          "path": ["api", "employees"]
+        }
+      }
+    },
+    {
+      "name": "Employees - Get By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/employees/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "employees", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Employees - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* updated employee fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/employees/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "employees", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Employees - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/employees/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "employees", ":id"]
+        }
+      }
+    },
+
+    {
+      "name": "Leaves - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* leave fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/leaves",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leaves"]
+        }
+      }
+    },
+    {
+      "name": "Leaves - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/leaves",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leaves"]
+        }
+      }
+    },
+    {
+      "name": "Leaves - Get By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/leaves/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leaves", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Leaves - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  /* updated leave fields here */\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/leaves/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leaves", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Leaves - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/leaves/:id",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leaves", ":id"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    }
+  ]
+}
